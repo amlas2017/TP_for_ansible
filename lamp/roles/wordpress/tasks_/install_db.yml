@@ -1,0 +1,13 @@
+---
+- name: create database.............
+  mysql_db:
+    name: "{{ mysql_db }}" 
+  become: yes
+
+- name: create user.................
+  mysql_user:
+    name: "{{ mysql_user }}"  
+    password: "{{ mysql_password }}"
+    priv: "*.*:ALL"
+  become: yes    
+                

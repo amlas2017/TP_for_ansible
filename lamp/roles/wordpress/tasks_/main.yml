@@ -1,0 +1,9 @@
+---
+- name: Install packages......
+  include: install_packages.yml
+
+- name: Install database......
+  include: install_db.yml
+
+- name: Install wordpress......
+  include: install_wordpress.yml
