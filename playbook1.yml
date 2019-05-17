@@ -1,0 +1,20 @@
+---
+- name: modules file et template
+  hosts: all
+  vars: 
+    myapp_conf:
+        - "buffer = True"
+        - "memory = 90mb"
+        - "cache = 1G"          
+  tasks: 
+    - name: creer dossier
+      file: 
+        path: /tmp/myapp/
+        state: directory
+        mode: 0755
+        owner: root
+    - name: creer template
+      template:
+         src: myappconf.cfg.j2
+         dest: /tmp/myapp/myappconf.cfg
+         mode: 0755    
