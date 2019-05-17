@@ -3,6 +3,7 @@
 #  DESCRIPTION: 
 #   mot de passe obtenu par :
 #          perl -e 'print crypt("password", "salt"),"\n"'
+
 ###############################################################
 
 USERNAME=$(id -nu)
